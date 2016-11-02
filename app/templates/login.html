@@ -1,0 +1,25 @@
+{% extends 'top.html' %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block body %}
+<script type="text/javascript">
+
+  var lock = new Auth0Lock('cQ4mvP1SJ8vOd0WB20hbIQjC9ZFlvXvj', 'karljr79.auth0.com');
+
+
+  function signin() {
+    lock.show({
+        callbackURL: '{{ callback }}'
+      , responseType: 'code'
+      , authParams: {
+        scope: 'openid name email picture'  // Learn about scopes: https://auth0.com/docs/scopes
+      }
+    });
+  }
+</script>
+<button class="btn btn-success" onclick="window.signin();">Login</button>
+
+{% endblock %}

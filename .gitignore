@@ -1,0 +1,17 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*pyc
+
+# Private Keys
+*.pem
+
+# dotenv
+.env
+
+# virtualenv
+venv/
+ENV/
+flask/
